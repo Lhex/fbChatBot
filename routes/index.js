@@ -12,12 +12,12 @@ router.get('/webhook', function (req, res) {
     console.log(req.body);
     var newMessage = Message({
       message: req.body.entry[0].messaging[0].message.text
-    })
+    });
     newMessage.save(function(err){
       if(err)
         throw next(err);
       console.log("message created!");
-    })
+    });
   } else {
     res.send('Error, wrong validation token');
   }
