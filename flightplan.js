@@ -17,7 +17,7 @@ var tmpDir = appName+'-' + new Date().getTime();
 
 plan.target('production', [
   {
-    host: '128.199.129.72',
+    host: '128.199.101.219',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
   },
